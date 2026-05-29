@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abdulhamid Ansari Nasab Minabi - Modeling & Simulation Researcher, Thermodynamics App Developer, EES Instructor. Seeking PhD in modeling & simulation." />
+  <meta property="og:title" content="Abdulhamid Ansari | Modeling, Simulation & Thermodynamics" />
+  <meta property="og:description" content="Mechanical engineering faculty, developer of a thermodynamics Android app, and instructor of EES courses. 16+ years of academic and industrial experience." />
+  <meta property="og:type" content="website" />
+  <title>Abdulhamid Ansari – Modeling, Simulation & Thermodynamics</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      line-height: 1.7;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    /* Navigation */
+    nav {
+      background: #0f172a;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    nav a {
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.4px;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #60a5fa; text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: white;
+      padding: 5rem 0 4rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .hero .subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.8rem; }
+    .hero .btn {
+      display: inline-block;
+      background: white;
+      color: #1e3a8a;
+      padding: 0.75rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: 0.2s;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .hero .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); text-decoration: none; }
+    .hero .profile-links {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+    .hero .profile-links a {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Sections */
+    section { padding: 4rem 0; }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: #0f172a;
+    }
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #2563eb;
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #1e3a8a; }
+    .card p, .card ul { margin-bottom: 1rem; }
+    .card ul { padding-left: 1.5rem; }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      padding: 0.5rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-outline:hover { background: #2563eb; color: white; text-decoration: none; }
+
+    /* Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 700px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+
+    /* Timeline */
+    .timeline-item { margin-bottom: 1.8rem; }
+    .timeline-item h4 { font-size: 1.1rem; margin-bottom: 0.2rem; }
+    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 0.4rem; }
+
+    .publication { margin-bottom: 1.2rem; font-size: 0.95rem; }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .contact-links a {
+      background: #2563eb;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0f172a;
+      color: #94a3b8;
+    }
+
+    /* Tag style */
+    .tag {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 0.2rem 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#phd">PhD Goal</a>
+      <a href="#app">App</a>
+      <a href="#courses">Courses</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Abdulhamid Ansari Nasab Minabi</h1>
+      <p class="subtitle">Modeling & Simulation Researcher • Mechanical Engineering Faculty<br>Developer of Thermodynamics Tools & EES Instructor</p>
+      <a href="#app" class="btn">⚡ Discover the App</a>
+      <div class="profile-links">
+        <a href="https://www.linkedin.com/in/abdulhamid-ansari" target="_blank">🔗 LinkedIn</a>
+        <a href="https://orcid.org/0000-0003-4835-6885" target="_blank">🆔 ORCID</a>
+        <a href="https://scholar.google.com/citations?user=Fix8yRYAAAAJ&hl=en" target="_blank">📚 Google Scholar</a>
+        <a href="https://ostad.hormozgan.ac.ir/ostad/resualti?m=387071" target="_blank">🏫 University Page</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="card" style="max-width:800px; margin:0 auto;">
+        <p>I am <strong>Abdulhamid Ansari Nasab Minabi</strong>, a faculty member in Mechanical Engineering at the University of Hormozgan with over <strong>16 years</strong> of combined academic and industrial experience. My work centers on <strong>advanced modeling, simulation, and optimization</strong> of thermofluidic systems, with a particular focus on steam power plants and solar energy.</p>
+        <p>I develop high‑fidelity simulations using <strong>Modelica, Mathematica, Python, Julia (CUDA), EES, Aspen HYSYS, Ansys Fluent, and COMSOL</strong>. I authored the Persian book <em>“Introduction to Modeling of Engineering Systems by Modelica”</em>, published several journal papers, and created two free EES training courses. In parallel, I have built an <strong>Android thermodynamics calculator</strong> that merges scientific computing with comprehensive property databases.</p>
+        <p><strong>Research Interests:</strong> Practical dynamic modeling & optimization • Data‑driven ML modeling • Interdisciplinary thermofluidic systems • Programming & tools development • Engineering education</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="phd" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>PhD Aspiration</h2>
+      <div class="card" style="max-width:800px; margin:0 auto;">
+        <h3>🎯 Seeking a PhD in Modeling & Simulation</h3>
+        <p>I am actively looking for a PhD position that leverages <strong>Modelica</strong> for interdisciplinary dynamic modeling. My goal is to combine my industrial and academic background to drive innovative simulation solutions, particularly in energy systems, and to contribute to the next generation of engineering tools.</p>
+        <p>I bring a strong publication record, top national exam rankings, and hands‑on experience in both research and power plant consulting. I am open to international collaboration and fully proficient in English (Academic IELTS 7.0).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="app">
+    <div class="container">
+      <h2>Thermodynamics Calculator App</h2>
+      <div class="card">
+        <h3>📱 Scientific Calculator + Thermodynamic Property Solver</h3>
+        <p>A professional Android app that integrates a full scientific calculator with extensive thermodynamic databases (steam, refrigerants, humid air, etc.). Perform state‑point calculations, cycle analysis, and unit conversions anywhere.</p>
+        <ul>
+          <li>Steam tables (saturated & superheated)</li>
+          <li>Refrigerant properties (R134a, R410A, etc.)</li>
+          <li>Psychrometrics & humid air</li>
+          <li>Memory functions, formula solver, custom functions</li>
+          <li>Free version available – Pro upgrade for extended libraries</li>
+        </ul>
+        <!-- REPLACE # with your actual Google Play link -->
+        <a href="#" class="btn-outline" target="_blank">Download on Google Play (Coming Soon)</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>EES Training Courses (Persian)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>🇮🇷 آموزش نرم‌افزار EES</h3>
+          <p><strong>(EES Software Training)</strong><br>
+          A free, step‑by‑step introduction to Engineering Equation Solver: interface, built‑in functions, parametric studies, and optimization. Perfect for students and practicing engineers.</p>
+          <a href="https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A7%DB%8C%D8%B2-mk12737/" class="btn-outline" target="_blank">View Course</a>
+        </div>
+        <div class="card">
+          <h3>🇮🇷 مدلسازی ترمودینامیکی نیروگاه بخار با EES</h3>
+          <p><strong>(Thermodynamic Modeling of a Steam Power Plant with EES)</strong><br>
+          Project‑based modeling of a real steam cycle: boiler, turbine, condenser, feedwater heaters. Learn how to build a full plant model and analyse performance.</p>
+          <a href="https://maktabkhooneh.org/course/%D9%85%D8%AF%D9%84%D8%B3%D8%A7%D8%B2%DB%8C-%D8%AA%D8%B1%D9%85%D9%88%D8%AF%DB%8C%D9%86%D8%A7%D9%85%DB%8C%DA%A9%DB%8C-%D9%86%DB%8C%D8%B1%D9%88%DA%AF%D8%A7%D9%87-%D8%A8%D8%AE%D8%A7%D8%B1-%D8%A7%DB%8C%D8%B2-mk12827/" class="btn-outline" target="_blank">View Course</a>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:2rem; color:#475569;">
+        🚀 <strong>Coming soon:</strong> Modelica for engineers, Python for thermo‑simulations, GPU‑accelerated modeling.
+      </p>
+    </div>
+  </section>
+
+  <section id="consulting">
+    <div class="container">
+      <h2>Consulting & Collaboration</h2>
+      <div class="card" style="max-width:800px; margin:0 auto;">
+        <h3>🔧 Industrial & Research Consulting</h3>
+        <p>I provide expert technical services based on years of power plant and gas refinery projects:</p>
+        <ul>
+          <li>Steam power plant performance optimization</li>
+          <li>Custom thermodynamic modeling (EES, Modelica, Aspen HYSYS)</li>
+          <li>Dynamic simulation of boilers and thermal systems</li>
+          <li>Compressor surge analysis and prevention</li>
+          <li>Educational workshops on numerical methods and EES</li>
+          <li>Patent examination in thermo‑fluidic technologies</li>
+        </ul>
+        <p><strong>Past clients:</strong> Bandar Abbas Power Generation Co., Hormozgan Regional Electric Co., Sarkhoon & Qeshm Gas Refinery.</p>
+        <a href="#contact" class="btn-outline" style="margin-top:0.5rem;">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Industrial Research Experience</h2>
+      <div class="card">
+        <div class="timeline-item">
+          <h4>Preventing Surges in Propane Cooling Turbo‑Compressors</h4>
+          <div class="meta">Sarkhoon & Qeshm Gas Refinery | 2023–2024</div>
+          <p>Led a research team to build simulation models with <strong>Aspen HYSYS, Mathematica, and EES</strong>. Identified optimal operating conditions, improving efficiency and safety of the cooling system.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Steady‑State Modeling of a 320 MW Boiler</h4>
+          <div class="meta">Bandar Abbas Power Generation Co. | 2018–2019</div>
+          <p>Created detailed steady‑state model using <strong>EES and Mathematica</strong>. Validated against operational data; published in <em>Applied Thermal Engineering</em> (2019).</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Dynamic Modeling of Power Plant Boiler</h4>
+          <div class="meta">Hormozgan Regional Electric Co. | 2009–2011</div>
+          <p>Developed dynamic models with <strong>Modelica, MATLAB, Mathematica, and EES</strong> to study transient boiler behavior and improve control strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <h2>Selected Publications</h2>
+      <div class="card">
+        <h3>📖 Book</h3>
+        <p><strong>“Introduction to Modeling of Engineering Systems by Modelica”</strong>, A. N. M. Ansari et al., University of Hormozgan Publication, 2ⁿᵈ ed., 2020. ISBN: 978-600-7279-267.</p>
+      </div>
+      <div class="card">
+        <h3>📄 Journal Papers</h3>
+        <div class="publication"><strong>F. Vakilipoor, A. N. M. Ansari</strong> et al., “Method of Fictitious Negative Sources…”, <em>IEEE Trans. Mol. Biol. Multi-Scale Commun.</em>, 2024.</div>
+        <div class="publication"><strong>F. Vakilipoor, A. N. M. Ansari</strong>, M. Magarini, “Heuristic Barycenter Modeling…”, <em>IEEE Trans. Commun.</em>, 2024.</div>
+        <div class="publication"><strong>F. Vakilipoor, A. N. M. Ansari</strong>, M. Magarini, “Localizing Unknown Receiver…”, <em>IEEE Trans. Mol. Biol. Multi-Scale Commun.</em>, 2023.</div>
+        <div class="publication">H. Ghaedi, E. Abedini, <strong>A. N. M. Ansari</strong>, “Thermo-economic analysis of desalination…”, <em>J. Braz. Soc. Mech. Sci. Eng.</em>, 2022.</div>
+        <div class="publication">H. Hajebzadeh, <strong>A. N. M. Ansari</strong>, S. Niazi, “Mathematical modeling of 320 MW boiler…”, <em>Applied Thermal Engineering</em>, 2019.</div>
+        <p style="margin-top:1.2rem;"><strong>14+ conference papers</strong> – full list on Google Scholar.</p>
+        <a href="https://scholar.google.com/citations?user=Fix8yRYAAAAJ&hl=en" target="_blank" class="btn-outline">View on Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Resume Highlights</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>🎓 Education</h3>
+          <div class="timeline-item">
+            <h4>M.Sc. Mechanical Engineering</h4>
+            <div class="meta">Sharif University of Technology, 2002–2005 | GPA 16.76/20</div>
+            <p>Thesis: “Design of a Solar Lemon Dryer” (CFD, optimization, diffusion modeling)</p>
+          </div>
+          <div class="timeline-item">
+            <h4>B.Sc. Mechanical Engineering</h4>
+            <div class="meta">University of Hormozgan, 1998–2002 | GPA 16.77/20</div>
+            <p>Final project: Concentrated Solar Collector. Top‑ranked student.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>⚙️ Core Skills</h3>
+          <div>
+            <span class="tag">Modelica</span><span class="tag">EES</span><span class="tag">Aspen HYSYS</span>
+            <span class="tag">Python</span><span class="tag">Julia CUDA</span><span class="tag">Mathematica</span>
+            <span class="tag">Fortran</span><span class="tag">Delphi</span><span class="tag">C#</span>
+            <span class="tag">Ansys Fluent</span><span class="tag">COMSOL</span>
+            <span class="tag">Power Plants</span><span class="tag">Solar Energy</span>
+            <span class="tag">Teaching</span><span class="tag">Academic IELTS 7.0</span>
+          </div>
+          <p style="margin-top:1rem;"><strong>Teaching:</strong> 21 MSc theses & 45 BSc projects supervised. Lecturer score <strong>19.38/20</strong> (1800+ surveys).</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:2rem;">
+        <h3>🏆 Key Rankings & Awards</h3>
+        <ul>
+          <li><strong>1ˢᵗ</strong> among instructors in nationwide PhD entrance exam (2024, 2025, 2026)</li>
+          <li>Ranked <strong>15ᵗʰ</strong> overall in PhD entrance exam (2026)</li>
+          <li>Exceptional lecturer score <strong>19.38/20</strong></li>
+          <li>Ranked <strong>63ʳᵈ</strong> in nationwide MSc entrance exam (2002)</li>
+          <li>Top student in BSc entrance year</li>
+        </ul>
+      </div>
+
+      <div style="text-align:center; margin-top:2rem;">
+        <!-- Link to your CV PDF when ready; currently placeholder -->
+        <a href="#" class="btn-outline">📄 Download Full CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p style="text-align:center; max-width:500px; margin:0 auto 1.5rem;">I’m open to PhD positions, collaborations, and consulting inquiries. Feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="mailto:ansari.nasab@gmail.com">✉️ ansari.nasab@gmail.com</a>
+        <a href="mailto:a.ansari@hormozgan.ac.ir">✉️ a.ansari@hormozgan.ac.ir</a>
+        <a href="https://www.linkedin.com/in/abdulhamid-ansari" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/hamid-ansari" target="_blank">💻 GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2025 Abdulhamid Ansari Nasab Minabi – Hosted on GitHub Pages.
+    </div>
+  </footer>
+</body>
+</html>
