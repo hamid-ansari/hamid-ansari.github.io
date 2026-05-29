@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta name="google-site-verification" content="L1sKi6ursYlSo5S3KzAXa9bvUMJaDG14AGCuK1HtWdc" />
   <meta name="msvalidate.01" content="72AEEFF2A484AE0D45C2A51EB21C9666" />
@@ -11,46 +11,124 @@
   <meta property="og:type" content="website" />
   <title>Abdulhamid Ansari – Modeling, Simulation & Thermodynamics</title>
   <style>
+    /* ===== Light Theme (default when no preference) ===== */
+    :root {
+      --bg-color: #f8fafc;
+      --surface-color: #ffffff;
+      --text-color: #1e293b;
+      --text-secondary: #475569;
+      --heading-color: #0f172a;
+      --primary: #2563eb;
+      --primary-dark: #1e3a8a;
+      --nav-bg: #0f172a;
+      --nav-text: #cbd5e1;
+      --nav-hover: #60a5fa;
+      --hero-bg-start: #1e3a8a;
+      --hero-bg-end: #2563eb;
+      --hero-text: #ffffff;
+      --card-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      --tag-bg: #e0e7ff;
+      --tag-color: #1e3a8a;
+      --border-color: #e2e8f0;
+      --btn-outline-border: #2563eb;
+      --btn-outline-text: #2563eb;
+      --footer-bg: #0f172a;
+      --footer-text: #94a3b8;
+      --section-alt-bg: #f1f5f9;
+    }
+
+    /* ===== Dark Theme ===== */
+    [data-theme="dark"] {
+      --bg-color: #0f172a;
+      --surface-color: #1e293b;
+      --text-color: #cbd5e1;
+      --text-secondary: #94a3b8;
+      --heading-color: #f1f5f9;
+      --primary: #60a5fa;
+      --primary-dark: #3b82f6;
+      --nav-bg: #020617;
+      --nav-text: #94a3b8;
+      --nav-hover: #60a5fa;
+      --hero-bg-start: #020617;
+      --hero-bg-end: #0f172a;
+      --hero-text: #f8fafc;
+      --card-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      --tag-bg: #1e3a8a;
+      --tag-color: #bfdbfe;
+      --border-color: #334155;
+      --btn-outline-border: #60a5fa;
+      --btn-outline-text: #60a5fa;
+      --footer-bg: #020617;
+      --footer-text: #64748b;
+      --section-alt-bg: #1e293b;
+    }
+
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: #1e293b;
-      background: #f8fafc;
+      color: var(--text-color);
+      background: var(--bg-color);
       line-height: 1.7;
+      transition: background-color 0.3s, color 0.3s;
     }
-    a { color: #2563eb; text-decoration: none; }
+    a { color: var(--primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
     /* Navigation */
     nav {
-      background: #0f172a;
+      background: var(--nav-bg);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
+      transition: background 0.3s;
     }
     nav .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: 1.2rem;
     }
     nav a {
-      color: #cbd5e1;
+      color: var(--nav-text);
       font-weight: 500;
       font-size: 0.9rem;
       letter-spacing: 0.4px;
       transition: color 0.2s;
     }
-    nav a:hover { color: #60a5fa; text-decoration: none; }
+    nav a:hover { color: var(--nav-hover); text-decoration: none; }
+
+    /* Theme toggle button */
+    #theme-toggle {
+      background: transparent;
+      border: 1px solid var(--nav-text);
+      color: var(--nav-text);
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: border-color 0.2s, color 0.2s;
+      background: transparent;
+    }
+    #theme-toggle:hover {
+      border-color: var(--nav-hover);
+      color: var(--nav-hover);
+    }
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      color: white;
+      background: linear-gradient(135deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 100%);
+      color: var(--hero-text);
       padding: 5rem 0 4rem;
       text-align: center;
+      transition: background 0.3s;
     }
     .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; }
     .hero .subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.8rem; }
@@ -88,39 +166,39 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 2.5rem;
-      color: #0f172a;
+      color: var(--heading-color);
     }
     section h2::after {
       content: '';
       display: block;
       width: 60px;
       height: 4px;
-      background: #2563eb;
+      background: var(--primary);
       margin: 0.8rem auto 0;
       border-radius: 2px;
     }
     .card {
-      background: white;
+      background: var(--surface-color);
       border-radius: 16px;
       padding: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      box-shadow: var(--card-shadow);
+      transition: background 0.3s, box-shadow 0.3s;
     }
-    .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #1e3a8a; }
+    .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-dark); }
     .card p, .card ul { margin-bottom: 1rem; }
     .card ul { padding-left: 1.5rem; }
     .btn-outline {
       display: inline-block;
-      border: 2px solid #2563eb;
-      color: #2563eb;
+      border: 2px solid var(--btn-outline-border);
+      color: var(--btn-outline-text);
       padding: 0.5rem 1.4rem;
       border-radius: 30px;
       font-weight: 600;
       transition: 0.2s;
     }
-    .btn-outline:hover { background: #2563eb; color: white; text-decoration: none; }
+    .btn-outline:hover { background: var(--primary); color: white; text-decoration: none; }
 
-    /* Grid */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -131,12 +209,12 @@
       .hero h1 { font-size: 2rem; }
     }
 
-    /* Timeline */
     .timeline-item { margin-bottom: 1.8rem; }
-    .timeline-item h4 { font-size: 1.1rem; margin-bottom: 0.2rem; }
-    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .timeline-item h4 { font-size: 1.1rem; margin-bottom: 0.2rem; color: var(--text-color); }
+    .meta { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.4rem; }
 
-    .publication { margin-bottom: 1.2rem; font-size: 0.95rem; }
+    .publication { margin-bottom: 1.2rem; font-size: 0.95rem; color: var(--text-secondary); }
+    .publication strong { color: var(--text-color); }
 
     .contact-links {
       display: flex;
@@ -146,7 +224,7 @@
       margin-top: 1.5rem;
     }
     .contact-links a {
-      background: #2563eb;
+      background: var(--primary);
       color: white;
       padding: 0.6rem 1.4rem;
       border-radius: 30px;
@@ -156,19 +234,25 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background: #0f172a;
-      color: #94a3b8;
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      transition: background 0.3s;
     }
 
-    /* Tag style */
     .tag {
       display: inline-block;
-      background: #e0e7ff;
-      color: #1e3a8a;
+      background: var(--tag-bg);
+      color: var(--tag-color);
       padding: 0.2rem 0.8rem;
       border-radius: 20px;
       font-size: 0.85rem;
       margin: 0.2rem 0.2rem;
+    }
+
+    /* Section with alternate background */
+    .section-alt {
+      background: var(--section-alt-bg);
+      transition: background 0.3s;
     }
   </style>
 </head>
@@ -183,7 +267,9 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#resume">Resume</a>
+      <a href="/blog/">Blog</a>
       <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Switch theme" title="Toggle dark/light mode">🌙</button>
     </div>
   </nav>
 
@@ -212,7 +298,7 @@
     </div>
   </section>
 
-  <section id="phd" style="background:#f1f5f9;">
+  <section id="phd" class="section-alt">
     <div class="container">
       <h2>PhD Aspiration</h2>
       <div class="card" style="max-width:800px; margin:0 auto;">
@@ -242,7 +328,7 @@
     </div>
   </section>
 
-  <section id="courses" style="background:#f1f5f9;">
+  <section id="courses" class="section-alt">
     <div class="container">
       <h2>EES Training Courses (Persian)</h2>
       <div class="grid-2">
@@ -259,7 +345,7 @@
           <a href="https://maktabkhooneh.org/course/%D9%85%D8%AF%D9%84%D8%B3%D8%A7%D8%B2%DB%8C-%D8%AA%D8%B1%D9%85%D9%88%D8%AF%DB%8C%D9%86%D8%A7%D9%85%DB%8C%DA%A9%DB%8C-%D9%86%DB%8C%D8%B1%D9%88%DA%AF%D8%A7%D9%87-%D8%A8%D8%AE%D8%A7%D8%B1-%D8%A7%DB%8C%D8%B2-mk12827/" class="btn-outline" target="_blank">View Course</a>
         </div>
       </div>
-      <p style="text-align:center; margin-top:2rem; color:#475569;">
+      <p style="text-align:center; margin-top:2rem; color: var(--text-secondary);">
         🚀 <strong>Coming soon:</strong> Modelica for engineers, Python for thermo‑simulations, GPU‑accelerated modeling.
       </p>
     </div>
@@ -285,7 +371,7 @@
     </div>
   </section>
 
-  <section id="research" style="background:#f1f5f9;">
+  <section id="research" class="section-alt">
     <div class="container">
       <h2>Industrial Research Experience</h2>
       <div class="card">
@@ -314,7 +400,7 @@
       <div class="card">
         <h3>📖 Book</h3>
         <p><strong>“Introduction to Modeling of Engineering Systems by Modelica”</strong>, A. N. M. Ansari et al., University of Hormozgan Publication, 2ⁿᵈ ed., 2020. ISBN: 978-600-7279-267.</p>
-<a href="https://modelica.org/publications/books/Modeling%20of%20Engineering%20Systems.pdf" class="btn-outline" target="_blank" rel="noopener"> 📥 View / Download Book (PDF) </a>
+        <a href="https://modelica.org/publications/books/Modeling%20of%20Engineering%20Systems.pdf" class="btn-outline" target="_blank" rel="noopener">📥 View / Download Book (PDF)</a>
       </div>
       <div class="card">
         <h3>📄 Journal Papers</h3>
@@ -329,7 +415,7 @@
     </div>
   </section>
 
-  <section id="resume" style="background:#f1f5f9;">
+  <section id="resume" class="section-alt">
     <div class="container">
       <h2>Resume Highlights</h2>
       <div class="grid-2">
@@ -372,7 +458,6 @@
       </div>
 
       <div style="text-align:center; margin-top:2rem;">
-        <!-- Link to your CV PDF when ready; currently placeholder -->
         <a href="#" class="btn-outline">📄 Download Full CV (PDF)</a>
       </div>
     </div>
@@ -396,5 +481,46 @@
       © 2025 Abdulhamid Ansari Nasab Minabi – Hosted on GitHub Pages.
     </div>
   </footer>
+
+  <script>
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+
+    function getPreferredTheme() {
+      // Check localStorage first
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+      // Check browser preference
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+      if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
+      // Fallback to dark as requested
+      return 'dark';
+    }
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      toggleBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('theme', theme);
+    }
+
+    // Initialize theme
+    const theme = getPreferredTheme();
+    applyTheme(theme);
+
+    // Toggle on button click
+    toggleBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+
+    // Listen for system theme changes (if user hasn't manually set)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        // Only auto-switch if user hasn't chosen manually
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  </script>
 </body>
 </html>
